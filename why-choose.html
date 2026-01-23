@@ -1,127 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <!-- Responsive Meta Viewport - REQUIRED -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="G3 Accounting Limited - Why Choose G3 Accounting Limited">
-    <title>Why Choose G3 Accounting Limited</title>
-    <!-- Basic SEO: Canonical Link -->
-    <link rel="canonical" href="why-choose.html">
+  <meta charset="UTF-8">
+  <!-- Responsive Meta Viewport - REQUIRED -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="G3 Accounting Limited - Why Choose G3 Accounting Limited">
+  <title>Why Choose G3 Accounting Limited</title>
+  <!-- Basic SEO: Canonical Link -->
+  <link rel="canonical" href="why-choose.html">
 
-    <!-- Load Tailwind CSS from CDN for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Load Tailwind CSS from CDN for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Added Playfair Display for Headings and Roboto for Body -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Added Playfair Display for Headings and Roboto for Body -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <script>
-      // Customizing Tailwind to match the original color variables and fonts
-      // NOW UNIFIED WITH INDEX.HTML
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'primary-green': '#1F4028',
-              'dark-green': '#152e1d',
-              'accent-gold': '#C19B63',
-              'cta-gold-btn': '#D2B48C',
-              'light-bg': '#F5F7F6',
-              'text-dark': '#2c2c2c',
-              'text-light-grey': '#6c757d',
-              'cta-heading-color': '#2D2D2D',
-              'cta-text-color': '#555555',
-            },
-            fontFamily: {
-              sans: ['Roboto', 'sans-serif'],
-              serif: ['Playfair Display', 'serif'],
-            },
-            borderRadius: {
-              'lg': '12px',
-              'btn': '30px',
-            },
-            transitionProperty: {
-              'shadow': 'box-shadow',
-            },
-          }
+  <script>
+    // Customizing Tailwind to match the original color variables and fonts
+    // NOW UNIFIED WITH INDEX.HTML
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-green': '#1F4028',
+            'dark-green': '#152e1d',
+            'accent-gold': '#C19B63',
+            'cta-gold-btn': '#D2B48C',
+            'light-bg': '#F5F7F6',
+            'text-dark': '#2c2c2c',
+            'text-light-grey': '#6c757d',
+            'cta-heading-color': '#2D2D2D',
+            'cta-text-color': '#555555',
+          },
+          fontFamily: {
+            sans: ['Roboto', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          borderRadius: {
+            'lg': '12px',
+            'btn': '30px',
+          },
+          transitionProperty: {
+            'shadow': 'box-shadow',
+          },
         }
       }
-    </script>
+    }
+  </script>
 
-    <style>
-      /* Base Body and Text Styles */
-      body { font-family: 'Roboto', sans-serif; color: var(--text-dark); background-color: #fff; scroll-behavior: smooth; }
-      h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
-      .fade-in { opacity: 0; transform: translateY(25px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
-      .fade-in.visible { opacity: 1; transform: translateY(0); }
-  
-      /* Navigation Link Styles for Gold Underline Effect */
-      .nav-link-item {
-          position: relative;
-          padding-bottom: 7px;
-          transition: color 0.3s ease-out;
-      }
-      .nav-link-item::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 100%;
-          height: 3px;
-          background-color: #C19B63; /* accent-gold */
-          transform: translateX(-50%) scaleX(0);
-          transition: transform 0.3s ease-out;
-          transform-origin: bottom center;
-      }
-      .nav-link-item:hover, .nav-link-item.active {
-          color: #1F4028 !important; /* primary-green */
-      }
-      .nav-link-item:hover::after, .nav-link-item.active::after {
-          transform: translateX(-50%) scaleX(1);
-      }
-  
-      /* Mobile Menu Toggle Styling */
-      .nav-mobile-menu.hidden { display: none; }
-      
-      .btn-lg-touch { padding: 0.8rem 2.5rem; }
-  
-      /* Why Choose Card Specifics */
-      .why-card {
-          background: #fff;
-          padding: 1.5rem;
-          border-radius: 12px;
-          box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-          border: 1px solid #f0f0f0;
-          transition: transform .35s, box-shadow .35s;
-          height: 100%;
-          text-align: center;
-      }
-      .why-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      }
-      .icon-circle {
-          height: 64px;
-          width: 64px;
-          border-radius: 50%;
-          background-color: #F5F7F6;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.5rem;
-          color: #C19B63;
-          margin: 0 auto 1.5rem auto;
-      }
-    </style>
+  <style>
+    /* Base Body and Text Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-dark);
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Navigation Link Styles for Gold Underline Effect */
+    .nav-link-item {
+      position: relative;
+      padding-bottom: 7px;
+      transition: color 0.3s ease-out;
+    }
+
+    .nav-link-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 100%;
+      height: 3px;
+      background-color: #C19B63;
+      /* accent-gold */
+      transform: translateX(-50%) scaleX(0);
+      transition: transform 0.3s ease-out;
+      transform-origin: bottom center;
+    }
+
+    .nav-link-item:hover,
+    .nav-link-item.active {
+      color: #1F4028 !important;
+      /* primary-green */
+    }
+
+    .nav-link-item:hover::after,
+    .nav-link-item.active::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    /* Mobile Menu Toggle Styling */
+    .nav-mobile-menu.hidden {
+      display: none;
+    }
+
+    .btn-lg-touch {
+      padding: 0.8rem 2.5rem;
+    }
+
+    /* Why Choose Card Specifics */
+    .why-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid #f0f0f0;
+      transition: transform .35s, box-shadow .35s;
+      height: 100%;
+      text-align: center;
+    }
+
+    .why-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-circle {
+      height: 64px;
+      width: 64px;
+      border-radius: 50%;
+      background-color: #F5F7F6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #C19B63;
+      margin: 0 auto 1.5rem auto;
+    }
+  </style>
 </head>
 
 <body class="text-text-dark flex flex-col min-h-screen">
-  
+
   <!-- START: HEADER/NAVIGATION -->
   <header class="shadow-md bg-white sticky top-0 z-50 fade-in" role="banner">
-    <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between" aria-label="Main navigation">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between"
+      aria-label="Main navigation">
       <!-- Logo -->
       <a class="flex items-center" href="index.html">
         <img src="g3_logo.png" alt="G3 Accounting Limited" class="h-12 w-auto">
@@ -129,134 +167,157 @@
 
       <!-- Mobile Menu Button -->
       <button class="lg:hidden text-primary-green p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold"
-              aria-controls="nav-mobile-menu" aria-expanded="false" id="mobile-menu-toggle">
+        aria-controls="nav-mobile-menu" aria-expanded="false" id="mobile-menu-toggle">
         <i class="fas fa-bars text-xl"></i>
       </button>
 
       <!-- Desktop Navigation Menu -->
       <div class="hidden lg:flex lg:items-center lg:space-x-4">
         <ul class="flex space-x-6 items-center" role="menubar">
-          <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem" href="index.html">Home</a></li>
-          <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem" href="about.html">About</a></li>
-          <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem" href="services.html">Services</a></li>
-          <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm active" role="menuitem" href="why-choose.html">Why Choose Us</a></li>
+          <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+              href="index.html">Home</a></li>
+          <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+              href="about.html">About</a></li>
+          <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm" role="menuitem"
+              href="services.html">Services</a></li>
+          <li role="none"><a class="nav-link-item text-text-dark font-medium text-sm active" role="menuitem"
+              href="why-choose.html">Why Choose Us</a></li>
           <li role="none" class="lg:ml-3">
             <a class="btn-lg-touch bg-primary-green text-white px-6 py-2 rounded-btn font-medium hover:bg-dark-green transition duration-300 transform hover:-translate-y-0.5 shadow-md"
-               role="menuitem" href="contact.html">Contact Us</a>
+              role="menuitem" href="contact.html">Contact Us</a>
           </li>
         </ul>
       </div>
     </nav>
-    
+
     <!-- Mobile Navigation Menu -->
     <div id="nav-mobile-menu" class="nav-mobile-menu hidden lg:hidden bg-light-bg py-4 border-t border-gray-200">
       <ul class="flex flex-col space-y-2 px-4" role="menu" aria-labelledby="mobile-menu-toggle">
-        <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem" href="index.html">Home</a></li>
-        <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem" href="about.html">About</a></li>
-        <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem" href="services.html">Services</a></li>
-        <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark active font-medium" role="menuitem" href="why-choose.html">Why Choose Us</a></li>
+        <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+            href="index.html">Home</a></li>
+        <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+            href="about.html">About</a></li>
+        <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark font-medium" role="menuitem"
+            href="services.html">Services</a></li>
+        <li role="none"><a class="nav-link-item block py-2 px-3 text-text-dark active font-medium" role="menuitem"
+            href="why-choose.html">Why Choose Us</a></li>
         <li role="none">
           <a class="block text-center mt-2 btn-lg-touch bg-primary-green text-white px-6 py-2 rounded-btn font-medium hover:bg-dark-green transition duration-300 shadow-md"
-             role="menuitem" href="contact.html">Contact Us</a>
+            role="menuitem" href="contact.html">Contact Us</a>
         </li>
       </ul>
     </div>
   </header>
 
-    <!-- Page Title Header -->
-    <section class="bg-primary-green text-white py-16 sm:py-24 text-center">
-        <div class="container mx-auto px-4">
-            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium italic mb-4 fade-in">Why Choose Us</h1>
-            <p class="text-lg sm:text-xl font-light opacity-90 mt-4 fade-in" style="transition-delay:.08s">Discover what sets G3 Accounting apart from the rest</p>
+  <!-- Page Title Header -->
+  <section class="bg-primary-green text-white py-16 sm:py-24 text-center">
+    <div class="container mx-auto px-4">
+      <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium italic mb-4 fade-in">Why Choose Us</h1>
+      <p class="text-lg sm:text-xl font-light opacity-90 mt-4 fade-in" style="transition-delay:.08s">Discover what sets
+        G3 Accounting apart from the rest</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main role="main">
+    <!-- Section: Key Advantages -->
+    <section class="py-16 sm:py-24 bg-white px-4">
+      <div class="container mx-auto">
+        <!-- Section Heading -->
+        <div class="text-center mb-12 fade-in">
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-primary-green mb-3">Our Key Advantages</h2>
+          <p class="text-text-light-grey max-w-2xl mx-auto">We provide a superior alternative to large firms while
+            maintaining professional excellence.</p>
         </div>
+
+        <!-- Cards Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1: Affordable Fees -->
+          <div class="why-card fade-in">
+            <div class="icon-circle">
+              <i class="fas fa-piggy-bank" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">Affordable Fees</h3>
+            <p class="text-sm text-text-light-grey leading-relaxed">Our structure ensures clients receive premium
+              service without the premium price tag.</p>
+          </div>
+          <!-- Card 2: 100% PNG-Owned -->
+          <div class="why-card fade-in" style="transition-delay:.06s">
+            <div class="icon-circle">
+              <i class="fas fa-chart-line" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">100% PNG-Owned</h3>
+            <p class="text-sm text-text-light-grey leading-relaxed">We understand the local market, culture, and
+              compliance environment better than anyone.</p>
+          </div>
+          <!-- Card 3: Expert Advice -->
+          <div class="why-card fade-in" style="transition-delay:.12s">
+            <div class="icon-circle">
+              <i class="far fa-lightbulb" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">Expert Advice</h3>
+            <p class="text-sm text-text-light-grey leading-relaxed">Backed by years of commercial, tax, and industry
+              experience across PNG and abroad.</p>
+          </div>
+          <!-- Card 4: Fast Turnaround -->
+          <div class="why-card fade-in">
+            <div class="icon-circle">
+              <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">Fast Turnaround</h3>
+            <p class="text-sm text-text-light-grey leading-relaxed">We deliver services efficiently and meet all
+              deadlines without compromising accuracy.</p>
+          </div>
+          <!-- Card 5: Dedicated Support -->
+          <div class="why-card fade-in" style="transition-delay:.06s">
+            <div class="icon-circle">
+              <i class="fas fa-headset" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">Dedicated Support</h3>
+            <p class="text-sm text-text-light-grey leading-relaxed">We provide consistent communication and personalized
+              client care.</p>
+          </div>
+          <!-- Card 6: Strong Client Relationships -->
+          <div class="why-card fade-in" style="transition-delay:.12s">
+            <div class="icon-circle">
+              <i class="fas fa-hands-helping" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">Strong Client Relationships</h3>
+            <p class="text-sm text-text-light-grey leading-relaxed">Our clients trust us because we deliver results that
+              support long-term growth.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- MAIN CONTENT -->
-    <main role="main">
-        <!-- Section: Key Advantages -->
-        <section class="py-16 sm:py-24 bg-white px-4">
-            <div class="container mx-auto">
-                <!-- Section Heading -->
-                <div class="text-center mb-12 fade-in">
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-primary-green mb-3">Our Key Advantages</h2>
-                    <p class="text-text-light-grey max-w-2xl mx-auto">We provide a superior alternative to large firms while maintaining professional excellence.</p>
-                </div>
-
-                <!-- Cards Grid -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Card 1: Affordable Fees -->
-                    <div class="why-card fade-in">
-                        <div class="icon-circle">
-                            <i class="fas fa-piggy-bank" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">Affordable Fees</h3>
-                        <p class="text-sm text-text-light-grey leading-relaxed">Our structure ensures clients receive premium service without the premium price tag.</p>
-                    </div>
-                    <!-- Card 2: 100% PNG-Owned -->
-                    <div class="why-card fade-in" style="transition-delay:.06s">
-                        <div class="icon-circle">
-                            <i class="fas fa-chart-line" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">100% PNG-Owned</h3>
-                        <p class="text-sm text-text-light-grey leading-relaxed">We understand the local market, culture, and compliance environment better than anyone.</p>
-                    </div>
-                    <!-- Card 3: Expert Advice -->
-                    <div class="why-card fade-in" style="transition-delay:.12s">
-                        <div class="icon-circle">
-                            <i class="far fa-lightbulb" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">Expert Advice</h3>
-                        <p class="text-sm text-text-light-grey leading-relaxed">Backed by years of commercial, tax, and industry experience across PNG and abroad.</p>
-                    </div>
-                    <!-- Card 4: Fast Turnaround -->
-                    <div class="why-card fade-in">
-                        <div class="icon-circle">
-                            <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">Fast Turnaround</h3>
-                        <p class="text-sm text-text-light-grey leading-relaxed">We deliver services efficiently and meet all deadlines without compromising accuracy.</p>
-                    </div>
-                    <!-- Card 5: Dedicated Support -->
-                    <div class="why-card fade-in" style="transition-delay:.06s">
-                        <div class="icon-circle">
-                            <i class="fas fa-headset" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">Dedicated Support</h3>
-                        <p class="text-sm text-text-light-grey leading-relaxed">We provide consistent communication and personalized client care.</p>
-                    </div>
-                    <!-- Card 6: Strong Client Relationships -->
-                    <div class="why-card fade-in" style="transition-delay:.12s">
-                        <div class="icon-circle">
-                            <i class="fas fa-hands-helping" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="font-serif text-xl font-bold mb-3 text-text-dark">Strong Client Relationships</h3>
-                        <p class="text-sm text-text-light-grey leading-relaxed">Our clients trust us because we deliver results that support long-term growth.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Call to Action -->
-        <section class="bg-light-bg py-16 sm:py-24 text-center border-t border-gray-200">
-            <div class="container mx-auto px-4">
-                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium italic text-primary-green mb-10 fade-in">Experience the G3 Difference</h2>
-                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 fade-in" style="transition-delay:.08s">
-                    <a href="contact.html" class="btn-lg-touch bg-accent-gold text-white px-10 py-3 rounded-btn font-medium inline-block hover:bg-cta-gold-btn transition duration-300 shadow-md w-full sm:w-auto text-center">Contact Us Today</a>
-                    <a href="services.html" class="btn-lg-touch bg-transparent border-2 border-primary-green text-primary-green px-10 py-3 rounded-btn font-medium inline-block hover:bg-primary-green hover:text-white transition duration-300 w-full sm:w-auto text-center">Our Services</a>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Section: Call to Action -->
+    <section class="bg-light-bg py-16 sm:py-24 text-center border-t border-gray-200">
+      <div class="container mx-auto px-4">
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium italic text-primary-green mb-10 fade-in">
+          Experience the G3 Difference</h2>
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 fade-in"
+          style="transition-delay:.08s">
+          <a href="contact.html"
+            class="btn-lg-touch bg-accent-gold text-white px-10 py-3 rounded-btn font-medium inline-block hover:bg-cta-gold-btn transition duration-300 shadow-md w-full sm:w-auto text-center">Contact
+            Us Today</a>
+          <a href="services.html"
+            class="btn-lg-touch bg-transparent border-2 border-primary-green text-primary-green px-10 py-3 rounded-btn font-medium inline-block hover:bg-primary-green hover:text-white transition duration-300 w-full sm:w-auto text-center">Our
+            Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- START: FOOTER -->
   <footer class="bg-primary-green text-white/80 py-12 sm:py-16 px-4 mt-auto" role="contentinfo">
     <div class="container mx-auto">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-        
+
         <!-- Company Info -->
         <div class="col-span-2 md:col-span-1">
           <h4 class="font-serif text-lg font-bold text-white mb-4">G3 Accounting Limited</h4>
-          <p class="text-sm leading-relaxed">Expertly Guiding Your Finances since 2014. 100% locally owned accounting firm in Papua New Guinea.</p>
+          <p class="text-sm leading-relaxed">Expertly Guiding Your Finances since 2014. 100% locally owned accounting
+            firm in Papua New Guinea.</p>
         </div>
 
         <!-- Quick Links -->
@@ -287,20 +348,33 @@
         <div>
           <h4 class="font-serif text-lg font-bold text-white mb-4">Contact Us</h4>
           <div class="text-sm space-y-3 leading-relaxed">
-            <p class="flex items-start"><i class="fas fa-map-marker-alt text-accent-gold mt-1 mr-3 min-w-[16px]"></i> PO Box 5070, Boroko, NCD, Papua New Guinea</p>
-            <p class="flex items-start"><i class="fas fa-globe text-accent-gold mt-1 mr-3 min-w-[16px]"></i> 21 High St Lutwyche, QLD 4030 (AU)</p>
-            <p class="flex items-center"><i class="fas fa-phone text-accent-gold mr-3 min-w-[16px]"></i> <a href="tel:+67571570138" class="hover:text-white transition duration-200">(+675) 71570138</a> / <a href="tel:+67570933885" class="hover:text-white transition duration-200">70933885</a></p>
-            <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i> <a href="mailto:g3acct@gmail.com" class="hover:text-white transition duration-200">g3acct@gmail.com</a></p>
-            <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i> <a href="mailto:phesiansassociates@gmail.com" class="hover:text-white transition duration-200">phesiansassociates@gmail.com (AU)</a></p>
-            
+            <p class="flex items-start"><i class="fas fa-map-marker-alt text-accent-gold mt-1 mr-3 min-w-[16px]"></i> PO
+              Box 5070, Boroko, NCD, Papua New Guinea</p>
+            <p class="flex items-start"><i class="fas fa-globe text-accent-gold mt-1 mr-3 min-w-[16px]"></i> 21 High St
+              Lutwyche, QLD 4030 (AU)</p>
+            <p class="flex items-center"><i class="fas fa-phone text-accent-gold mr-3 min-w-[16px]"></i> <a
+                href="tel:+67571570138" class="hover:text-white transition duration-200">(+675) 71570138</a> / <a
+                href="tel:+67570933885" class="hover:text-white transition duration-200">70933885</a></p>
+            <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i> <a
+                href="mailto:g3acct@gmail.com" class="hover:text-white transition duration-200">g3acct@gmail.com</a></p>
+            <p class="flex items-center"><i class="fas fa-envelope text-accent-gold mr-3 min-w-[16px]"></i> <a
+                href="mailto:phesiansassociates@gmail.com"
+                class="hover:text-white transition duration-200">phesiansassociates@gmail.com (AU)</a></p>
+
+            <!-- Social Icons (Accessible links) -->
             <div class="pt-3 flex space-x-4">
-                <a href="#" class="text-white hover:text-accent-gold transition duration-200" aria-label="Find us on Facebook"><i class="fab fa-facebook-f text-lg"></i></a>
-                <a href="#" class="text-white hover:text-accent-gold transition duration-200" aria-label="Find us on LinkedIn"><i class="fab fa-linkedin-in text-lg"></i></a>
+              <a href="#" class="text-white hover:text-accent-gold transition duration-200" aria-label="Find us on Facebook"><i
+                  class="fab fa-facebook-f text-lg"></i></a>
+              <a href="https://www.linkedin.com/in/larry-auakai-94576245"
+                class="text-white hover:text-accent-gold transition duration-200" aria-label="Find Larry Auakai on LinkedIn"
+                target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in text-lg"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
-      
+
       <!-- Copyright/Legal -->
       <div class="border-t border-white/20 mt-8 pt-6 text-center text-sm">
         <p>&copy; 2025 G3 Accounting Limited. All rights reserved.</p>
@@ -331,4 +405,5 @@
   </script>
 
 </body>
+
 </html>
